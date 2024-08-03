@@ -1,36 +1,30 @@
 <?php
-session_start();
-include('db.php');
+// Datos de conexión
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "todo_list";
 
-if (!isset($_SESSION['usuario'])) {
-    header('Location: login.php');
-    exit();
+// Crear conexión
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Verificar conexión
+if ($conn->connect_error) {
+    die("Conexión fallida: " . $conn->connect_error);
 }
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $usuario = $_SESSION['usuario'];
-    $tarea = $_POST['tarea'];
+// Capturar datos del formulario
+$titulo = $_POST['titulo'];
+$descripcion = $_POST['descripcion'];
 
-    $query = "INSERT INTO tareas (usuario, tarea) VALUES ('$usuario', '$tarea')";
-    if ($conexion->query($query)) {
-        echo 'Tarea creada correctamente';
-    } else {
-        echo 'Error al crear la tarea';
-    }
+// Consulta para insertar datos en la tabla
+$sql = "INSERT INTO tareas (titulo, descripcion) VALUES ('$titulo', '$descripcion')";
+
+if ($conn->query($sql) === TRUE) {
+    echo "Nueva tarea agregada exitosamente";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
 }
+
+$conn->close();
 ?>
-
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Agregar tarea</title>
-</head>
-<body>
-    <form action="agregar_tarea.php" method="post">
-        <label for="tarea">Tarea:</label>
-        <input type="text" name="tarea" required>
-        <button type="submit">Agregar</button>
-    </form>
-</body>
-</html>
