@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "389669048833",
+    "project_id": "codigo-task-cdadc",
+    "storage_bucket": "codigo-task-cdadc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:389669048833:android:e32e117b508135c24b2600",
+        "android_client_info": {
+          "package_name": "com.livcode.firetask"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "389669048833-ugngv1elis58g8dl91o18vt9oqf6gju9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHBpdslqBF1WC-ohHXfyOUJ5Cyqgoo6vI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "389669048833-ugngv1elis58g8dl91o18vt9oqf6gju9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
