@@ -1,0 +1,144 @@
+/* Archivo: styles.css */
+
+/* Estilo global */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor principal */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Header */
+header {
+    background: #333;
+    color: #fff;
+    padding-top: 10px;
+    min-height: 70px;
+    border-bottom: #0779e4 3px solid;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header ul {
+    padding: 0;
+    list-style: none;
+}
+
+header li {
+    float: left;
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+/* Formulario de login y registro */
+form {
+    background: #fff;
+    padding: 20px;
+    margin: 15px 0;
+    box-shadow: 0px 0px 10px 0px #000;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+form input[type="email"],
+form input[type="password"],
+form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    border: none;
+}
+
+form button:hover {
+    background: #0779e4;
+}
+
+/* Tabla de tareas */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background: #333;
+    color: #fff;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Botones */
+.btn {
+    display: inline-block;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 3px;
+}
+
+.btn-edit {
+    background: #5cb85c;
+}
+
+.btn-delete {
+    background: #d9534f;
+}
+
+.btn-add {
+    background: #5bc0de;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+/* Mensajes */
+.message {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #dcdcdc;
+    background-color: #f9f9f9;
+}
+
+.message.success {
+    border-color: #4caf50;
+    color: #4caf50;
+}
+
+.message.error {
+    border-color: #f44336;
+    color: #f44336;
+}
